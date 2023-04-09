@@ -1,3 +1,7 @@
+youtube tutes -- 
+### Raster Vision with Adeel Hassan
+Robin Cole = https://www.youtube.com/watch?v=hH59fQ-HhZg&t=519s
+
 ![Raster Vision Logo](docs/img/raster-vision-logo.png)
 &nbsp;
 
