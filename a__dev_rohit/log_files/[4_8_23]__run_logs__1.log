@@ -1,0 +1,66 @@
+
+
+(env_raster_vis) dhankar@dhankar-1:~/.../raster-vision$ 
+(env_raster_vis) dhankar@dhankar-1:~/.../raster-vision$ rastervision run local code/tiny_spacenet.py
+2023-04-09 20:54:10:rastervision.pipeline.rv_config: WARNING - Root temporary directory cannot be used: /opt/data/tmp. Using root: /tmp/tmpp4gp4f1i
+2023-04-09 20:54:11:rastervision.pipeline.rv_config: WARNING - Root temporary directory cannot be used: /opt/data/tmp. Using root: /tmp/tmp8y0yjm2k
+[INFO_]_commands___ ()
+[INFO_]_commands_cfg_module__ code/tiny_spacenet.py
+[INFO_]____make_dir(path_ /home/dhankar/temp/02_23/raster_vision/raster-vision/output/pipeline-config.json
+[INFO_]____make_dir__OK__Done___
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+Skipping 'analyze' command...
+[INFO_]____make_dir(path_ /home/dhankar/temp/02_23/raster_vision/raster-vision/output/Makefile
+[INFO_]____make_dir__OK__Done___
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+python -m rastervision.pipeline.cli run_command /home/dhankar/temp/02_23/raster_vision/raster-vision/output/pipeline-config.json train
+2023-04-09 20:54:11:rastervision.pipeline.rv_config: WARNING - Root temporary directory cannot be used: /opt/data/tmp. Using root: /tmp/tmp8pb0ot46
+2023-04-09 20:54:12:rastervision.pipeline.rv_config: WARNING - Root temporary directory cannot be used: /opt/data/tmp. Using root: /tmp/tmpujl632bt
+Running train command...
+[INFO_]____make_dir(path_ /home/dhankar/temp/02_23/raster_vision/raster-vision/output/train
+[INFO_]____make_dir__OK__Done___
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+[INFO_]____make_dir(path_ /home/dhankar/temp/02_23/raster_vision/raster-vision/output/train/learner-config.json
+[INFO_]____make_dir__OK__Done___
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+Traceback (most recent call last):
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pipeline/cli.py", line 255, in <module>
+    _main()
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pipeline/cli.py", line 251, in _main
+    main()
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/click/core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pipeline/cli.py", line 240, in run_command
+    _run_command(
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pipeline/cli.py", line 222, in _run_command
+    command_fn()
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/core/rv_pipeline/rv_pipeline.py", line 154, in train
+    backend.train(source_bundle_uri=self.config.source_bundle_uri)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pytorch_backend/pytorch_learner_backend.py", line 119, in train
+    learner = self.learner_cfg.build(self.tmp_dir, training=True)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pytorch_learner/semantic_segmentation_learner_config.py", line 215, in build
+    return SemanticSegmentationLearner(
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pytorch_learner/learner.py", line 239, in __init__
+    self.setup_training(loss_def_path=loss_def_path)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pytorch_learner/learner.py", line 283, in setup_training
+    str_to_file(cfg.json(), self.config_path)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pipeline/file_system/utils.py", line 302, in str_to_file
+    return fs.write_str(uri, content_str)
+  File "/home/dhankar/anaconda3/envs/env_raster_vis/lib/python3.10/site-packages/rastervision/pipeline/file_system/local_file_system.py", line 99, in write_str
+    with open(file_uri, 'w') as content_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/dhankar/temp/02_23/raster_vision/raster-vision/output/train/learner-config.json'
+/home/dhankar/temp/02_23/raster_vision/raster-vision/output/Makefile:6: recipe for target '0' failed
+make: *** [0] Error 1
+(env_raster_vis) dhankar@dhankar-1:~/.../raster-vision$ 

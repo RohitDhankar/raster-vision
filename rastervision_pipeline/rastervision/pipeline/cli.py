@@ -163,8 +163,13 @@ def run(runner: str, cfg_module: str, commands: List[str],
     which to run them is based on the Pipeline.commands attribute. If this is omitted,
     all commands will be run.
     """
+    print("[INFO_]_commands___",commands)
+    print("[INFO_]_commands_cfg_module__",cfg_module)
+    
+
     tmp_dir_obj = get_tmp_dir()
     tmp_dir = tmp_dir_obj.name
+    print("[INFO_]_commands__tmp_dir_",tmp_dir)
 
     args = dict(arg)
     args = convert_bool_args(args)

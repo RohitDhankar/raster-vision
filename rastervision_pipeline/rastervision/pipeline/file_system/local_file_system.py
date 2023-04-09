@@ -22,6 +22,9 @@ def make_dir(path, check_empty=False, force_empty=False, use_dirname=False):
     Raises:
         ValueError if check_empty is True and directory is not empty
     """
+    
+    print("[INFO_]____make_dir(path_",path)
+
     directory = path
     if use_dirname:
         directory = os.path.abspath(os.path.dirname(path))
